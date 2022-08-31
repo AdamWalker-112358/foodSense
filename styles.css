@@ -143,7 +143,6 @@ p {
     gap: 5px;
 
     border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
 }
 
 .subscribe__instructions {
@@ -189,7 +188,7 @@ p {
 
 .blog {
     padding: 20px 0;
-    border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
     
 
     display: flex;
@@ -238,6 +237,8 @@ p {
 
 .wrapper__footer {
 
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
 
     display: flex; 
     justify-content: space-between;
@@ -340,12 +341,14 @@ p {
         justify-content: center;
         align-items: center;
         gap: 5px;
+        font-size: 1.4rem;
     }
     
     .wrapper__header i {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         background-size: contain;
+        background-repeat: no-repeat;
         display: block;
     }
 
@@ -353,8 +356,8 @@ p {
         background-image: url(./media/originalAssets/FoodsenseIcons/nav-tastemakers.png);
     }
 
-    .wrapper__header .blog {
-        background-image: url(./media/originalAssets/FoodsenseIcons/nav-blog.png);
+    .wrapper__header .blog-icon {
+        background-image: url(./media/originalAssets/FoodsenseIcons/nav-blog-new.png);
     }
 
     .wrapper__header .list {
@@ -373,7 +376,7 @@ p {
         display:flex;
         flex-direction: column;
         align-items: flex-start;
-        bottom: 20%;
+        bottom: 80px;
     }
 
     .main__hero-image h1 {
@@ -412,10 +415,19 @@ p {
         flex-basis: 100%;
         padding: 10px 0;
 
-        font-size: 1.6rem;
+        
 
         background-color: #eff8f7;
         color: var(--text-color);
+    }
+
+    .main__hero-image h3 {
+        font-weight: 100;
+        font-size: 1.4rem;
+    }
+
+    .main__hero-image li p {
+        display: none;
     }
 
     .main__hero-image li:first-child {
@@ -445,4 +457,144 @@ p {
     .blog {
         flex-basis: calc(25% - 10px);
     };
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    .page-wrapper {
+        max-width: 900px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .page-wrapper > *{
+        flex-grow: 1;
+    }
+
+    .wrapper__header {
+        flex-basis: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .header__nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header__nav li a {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .wrapper__main {
+        flex-basis: calc(60%);
+        width: 60%;
+    }
+
+    .header__social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
+
+        order: 1;
+    }
+
+    .header__social button {
+        
+        border: 1px solid rgba(211, 211, 211, 0.633);
+        
+        display: flex;
+        align-items: center;
+
+        background-color: white;
+        color: var(--text-color);
+
+    }
+
+    .header__social > * {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .header__social button {
+        padding: 5px;
+        border-radius: 5px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .header__social button i {
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+        margin-right: 5px;
+    }
+
+    .header__social .twitter button i {
+        background-image: url(./media/originalAssets/FoodsenseIcons/icon-twitter-16.png);
+    }
+
+    .header__social .facebook button i {
+        background-image: url(./media/originalAssets/FoodsenseIcons/icon-facebook-16.png);
+    }
+
+    .header__social h2{
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 200;
+        border-bottom: 1px dotted var(--border-color)
+    }
+
+    .header__social p {
+        font-size: 1rem;
+        width: auto;
+    }
+
+    .wrapper__footer {
+        flex-basis: 100%;
+
+    }
+
+}
+
+@media screen and (min-width: 1175px){
+
+    .main__hero-image hgroup {
+        bottom: 120px;
+    }
+
+    .main__hero-image figcaption {
+        bottom: 90px;
+    }
+
+    .main__hero-image li {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start ;
+        padding: 20px 15px;
+
+        
+    }
+
+    .main__hero-image h3 {
+        font-weight: 100;
+        font-size: 1.4rem;
+    }
+
+    .main__hero-image li p {
+        display: unset;
+        font-size: 1rem;
+    }
+
 }
